@@ -1,4 +1,4 @@
-package com.ris.practise.designPatterns.strategyPattern.killStrategies;
+package com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killStrategies;
 
 public class SlowKillStrategy implements KillStrategyInterface {
     @Override

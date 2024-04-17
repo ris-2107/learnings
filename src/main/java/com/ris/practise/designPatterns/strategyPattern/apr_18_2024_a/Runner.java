@@ -1,9 +1,9 @@
-package com.ris.practise.designPatterns.strategyPattern;
+package com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a;
 
-import com.ris.practise.designPatterns.strategyPattern.killers.Dracula;
-import com.ris.practise.designPatterns.strategyPattern.killers.JohnWick;
-import com.ris.practise.designPatterns.strategyPattern.killers.KillerBaseClass;
-import com.ris.practise.designPatterns.strategyPattern.killers.Thanos;
+import com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killers.Dracula;
+import com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killers.JohnWick;
+import com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killers.KillerBaseClass;
+import com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killers.Thanos;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication

@@ -1,6 +1,6 @@
-package com.ris.practise.designPatterns.strategyPattern.killers;
+package com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killers;
 
-import com.ris.practise.designPatterns.strategyPattern.killStrategies.KillStrategyInterface;
+import com.ris.practise.designPatterns.strategyPattern.apr_18_2024_a.killStrategies.KillStrategyInterface;
 
 public class KillerBaseClass {
     KillStrategyInterface killStrategyInterface;
@@ -8,6 +8,7 @@ public class KillerBaseClass {
     KillerBaseClass(KillStrategyInterface killStrategyInterface){
         this.killStrategyInterface = killStrategyInterface;
     }
+
     public void killAction(){
         killStrategyInterface.weaponUsed();
         killStrategyInterface.timeTaken();
