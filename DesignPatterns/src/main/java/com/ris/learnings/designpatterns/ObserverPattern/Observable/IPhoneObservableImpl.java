@@ -1,6 +1,6 @@
-package com.ris.designpatterns.ObserverPattern.Observable;
+package com.ris.learnings.designpatterns.ObserverPattern.Observable;
 
-import com.ris.designpatterns.ObserverPattern.Observer.NotificationAlertObserver;
+import com.ris.learnings.designpatterns.ObserverPattern.Observer.NotificationAlertObserver;
 
 import java.util.ArrayList;
 import java.util.List;

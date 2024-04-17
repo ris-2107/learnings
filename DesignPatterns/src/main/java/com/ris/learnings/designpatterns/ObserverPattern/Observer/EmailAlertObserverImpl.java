@@ -1,6 +1,6 @@
-package com.ris.designpatterns.ObserverPattern.Observer;
+package com.ris.learnings.designpatterns.ObserverPattern.Observer;
 
-import com.ris.designpatterns.ObserverPattern.Observable.StocksObservable;
+import com.ris.learnings.designpatterns.ObserverPattern.Observable.StocksObservable;
 
 public class EmailAlertObserverImpl implements NotificationAlertObserver {
 

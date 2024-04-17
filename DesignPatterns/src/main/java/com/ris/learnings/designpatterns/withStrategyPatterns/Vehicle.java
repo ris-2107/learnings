@@ -1,6 +1,6 @@
-package com.ris.designpatterns.withStrategyPatterns;
+package com.ris.learnings.designpatterns.withStrategyPatterns;
 
-import com.ris.designpatterns.withStrategyPatterns.Strategy.DriveStrategy;
+import com.ris.learnings.designpatterns.withStrategyPatterns.Strategy.DriveStrategy;
 
 public class Vehicle {
     DriveStrategy driveStrategy;

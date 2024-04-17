@@ -1,4 +1,4 @@
-package com.ris.designpatterns.withStrategyPatterns.Strategy;
+package com.ris.learnings.designpatterns.withStrategyPatterns.Strategy;
 
 public class NormalDriveStrategy implements DriveStrategy {
 

@@ -1,4 +1,4 @@
-package com.ris.designpatterns.withStrategyPatterns;
+package com.ris.learnings.designpatterns.withStrategyPatterns;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

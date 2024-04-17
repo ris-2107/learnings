@@ -1,10 +1,10 @@
-package com.ris.designpatterns.ObserverPattern;
+package com.ris.learnings.designpatterns.ObserverPattern;
 
-import com.ris.designpatterns.ObserverPattern.Observable.IPhoneObservableImpl;
-import com.ris.designpatterns.ObserverPattern.Observable.StocksObservable;
-import com.ris.designpatterns.ObserverPattern.Observer.EmailAlertObserverImpl;
-import com.ris.designpatterns.ObserverPattern.Observer.MobileAlertObserverImpl;
-import com.ris.designpatterns.ObserverPattern.Observer.NotificationAlertObserver;
+import com.ris.learnings.designpatterns.ObserverPattern.Observable.IPhoneObservableImpl;
+import com.ris.learnings.designpatterns.ObserverPattern.Observable.StocksObservable;
+import com.ris.learnings.designpatterns.ObserverPattern.Observer.EmailAlertObserverImpl;
+import com.ris.learnings.designpatterns.ObserverPattern.Observer.MobileAlertObserverImpl;
+import com.ris.learnings.designpatterns.ObserverPattern.Observer.NotificationAlertObserver;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
