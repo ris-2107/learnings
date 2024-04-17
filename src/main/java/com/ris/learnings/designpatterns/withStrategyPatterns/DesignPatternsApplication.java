@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DesignPatternsApplication {
 
     public static void main(String[] args) {
-        Vehicle vehicle=new NormalVehicle();
+        Vehicle normalVehicle=new NormalVehicle();
         Vehicle sportsVehicle=new SportsVehicle();
-        vehicle.drive();
+        normalVehicle.drive();
         sportsVehicle.drive();
     }
 
