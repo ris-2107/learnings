@@ -1,7 +1,7 @@
 package com.ris.practise.designPatterns.strategyPattern.killStrategies;
 
 
-public class FastKillStrategy implements KillStrategy {
+public class FastKillStrategy implements KillStrategyInterface {
     @Override
     public void weaponUsed() {
         System.out.println("weapon used : AK-47");

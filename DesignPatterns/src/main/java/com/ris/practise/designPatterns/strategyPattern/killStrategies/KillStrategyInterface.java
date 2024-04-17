@@ -1,6 +1,6 @@
 package com.ris.practise.designPatterns.strategyPattern.killStrategies;
 
-public interface KillStrategy {
+public interface KillStrategyInterface {
     public void weaponUsed();
 
     public void timeTaken();

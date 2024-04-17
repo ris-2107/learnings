@@ -1,6 +1,6 @@
 package com.ris.practise.designPatterns.strategyPattern.killStrategies;
 
-public class SlowKillStrategy implements KillStrategy{
+public class SlowKillStrategy implements KillStrategyInterface {
     @Override
     public void weaponUsed() {
         System.out.println("weapon used: Knife");
