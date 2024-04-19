@@ -5,37 +5,36 @@ import com.ris.practise.designPatterns.observerPattern.apr_18_2024_a.Observer.Ob
 import java.util.ArrayList;
 import java.util.List;
 
-public class MeteoriteObservable implements IObservable {
-    List<ObserverBase> observersList = new ArrayList<>();
-    int initialMeteoriteData = 1000;
-
+public class SatelliteObservable implements IObservable {
+    List<ObserverBase> observers = new ArrayList<>();
+    int initNoOfSat = 0;
 
     @Override
-    public void add(ObserverBase o) {
-        observersList.add(o);
+    public void add(ObserverBase ob) {
+        observers.add(ob);
     }
 
     @Override
-    public void remove(ObserverBase o) {
-        observersList.remove(o);
+    public void remove(ObserverBase ob) {
+        observers.remove(ob);
     }
 
     @Override
     public void setData(int dataToSet) {
-        if (dataToSet > initialMeteoriteData) {
+        if (initNoOfSat == 0) {
             notifyObservers();
         }
-        initialMeteoriteData += dataToSet;
+        initNoOfSat += dataToSet;
     }
 
     @Override
     public void getData() {
-        System.out.print(initialMeteoriteData);
+
     }
 
     @Override
     public void notifyObservers() {
-        for (ObserverBase ob : observersList) {
+        for (ObserverBase ob : observers) {
             ob.update();
         }
     }
