@@ -1,7 +1,7 @@
 package com.ris.learnings.designpatterns.FactoryPattern.Factory;
 
-import com.ris.learnings.designpatterns.FactoryPattern.Shapes.IShape;
 import com.ris.learnings.designpatterns.FactoryPattern.Shapes.Circle;
+import com.ris.learnings.designpatterns.FactoryPattern.Shapes.IShape;
 import com.ris.learnings.designpatterns.FactoryPattern.Shapes.Rectangle;
 
 public class ShapeFactory {
@@ -13,7 +13,6 @@ public class ShapeFactory {
                 return new Rectangle();
             default:
                 return null;
-
         }
     }
 }
