@@ -1,10 +1,19 @@
 package com.ris.practise.designPatterns.observerPattern.apr_18_2024_a.Observer;
 
-import java.util.List;
+import com.ris.practise.designPatterns.observerPattern.apr_18_2024_a.Observable.IObservable;
 
-public class SpaceXObserver implements ObserverBase{
+public class SpaceXObserver implements IObserverBase {
+
+    IObservable observable;
+    String personName;
+
+    public SpaceXObserver(IObservable ob, String personName) {
+        this.observable = ob;
+        this.personName = personName;
+    }
+
     @Override
     public void update() {
-
+        System.out.println("SPACEX RECEIVED NOTIFICATION " + "POST " + personName);
     }
 }
