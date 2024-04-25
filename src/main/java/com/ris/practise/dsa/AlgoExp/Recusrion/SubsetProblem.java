@@ -11,18 +11,18 @@ public class SubsetProblem {
         System.out.println(subset(arrayList));
     }
 
-    public static ArrayList<ArrayList<Integer>> subset(ArrayList<Integer> arr) {
-        ArrayList<ArrayList<Integer>> subSets = new ArrayList<>();
-        subSets.add(new ArrayList<>());
-
-        for (int element : arr) {
-            int currentSize = subSets.size();
-            for (int i = 0; i < currentSize; i++) {
-                ArrayList<Integer> newSubset = new ArrayList<>(subSets.get(i));
-                newSubset.add(element);
-                subSets.add(newSubset);
+    static ArrayList<ArrayList<Integer>> subset(ArrayList<Integer> arrayList) {
+        ArrayList<ArrayList<Integer>> subSet = new ArrayList<>();
+        subSet.add(new ArrayList<>());
+        for (int ele : arrayList) {
+            int currSize = subSet.size();
+            for (int i = 0; i < currSize; i++) {
+                ArrayList<Integer> newSubSet = new ArrayList<>(subSet.get(i));
+                newSubSet.add(ele);
+                subSet.add(newSubSet);
             }
         }
-        return subSets;
+        return subSet;
     }
+
 }
