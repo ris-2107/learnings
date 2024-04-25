@@ -14,14 +14,10 @@ public class SubsetProblem {
     static ArrayList<ArrayList<Integer>> subset(ArrayList<Integer> arrayList) {
         ArrayList<ArrayList<Integer>> subSet = new ArrayList<>();
         subSet.add(new ArrayList<>());
-        for (int ele : arrayList) {
-            int currSize = subSet.size();
-            for (int i = 0; i < currSize; i++) {
-                ArrayList<Integer> newSubSet = new ArrayList<>(subSet.get(i));
-                newSubSet.add(ele);
-                subSet.add(newSubSet);
-            }
+        for( int ele: arrayList){
+            
         }
+
         return subSet;
     }
 
