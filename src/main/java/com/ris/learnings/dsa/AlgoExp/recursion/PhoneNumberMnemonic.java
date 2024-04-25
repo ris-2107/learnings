@@ -8,18 +8,7 @@ import java.util.List;
 class PhoneNumberMnemonic {
 
     // Mapping digits to corresponding letter sequences
-    static final List<List<String>> DIGIT_LETTERS = Arrays.asList(
-            Arrays.asList("0"),
-            Arrays.asList("1"),
-            Arrays.asList("a", "b", "c"),
-            Arrays.asList("d", "e", "f"),
-            Arrays.asList("g", "h", "i"),
-            Arrays.asList("j", "k", "l"),
-            Arrays.asList("m", "n", "o"),
-            Arrays.asList("p", "q", "r", "s"),
-            Arrays.asList("t", "u", "v"),
-            Arrays.asList("w", "x", "y", "z")
-    );
+    static final List<List<String>> DIGIT_LETTERS = Arrays.asList(List.of("0"), List.of("1"), Arrays.asList("a", "b", "c"), Arrays.asList("d", "e", "f"), Arrays.asList("g", "h", "i"), Arrays.asList("j", "k", "l"), Arrays.asList("m", "n", "o"), Arrays.asList("p", "q", "r", "s"), Arrays.asList("t", "u", "v"), Arrays.asList("w", "x", "y", "z"));
 
     // Function to generate all possible mnemonics from a given phone number
     static List<String> phoneNumberMnemonic(String phoneNumber) {
@@ -42,6 +31,7 @@ class PhoneNumberMnemonic {
             // If the index reaches the length of the phone number, join the current mnemonic and add it to the list
             String mnemonic = String.join("", currentMnemonic);
             mnemonicFound.add(mnemonic);
+
         } else {
 
             // Get the digit at the current index
