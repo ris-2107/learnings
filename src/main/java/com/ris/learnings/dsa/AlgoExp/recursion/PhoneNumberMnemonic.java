@@ -38,14 +38,18 @@ class PhoneNumberMnemonic {
     // Recursive helper function to build mnemonics
     static void phoneNumberMnemonicHelper(int idx, String phoneNumber, List<String> currentMnemonic, List<String> mnemonicFound) {
         if (idx == phoneNumber.length()) {
+
             // If the index reaches the length of the phone number, join the current mnemonic and add it to the list
             String mnemonic = String.join("", currentMnemonic);
             mnemonicFound.add(mnemonic);
         } else {
+
             // Get the digit at the current index
             char digit = phoneNumber.charAt(idx);
+
             // Get the corresponding letters for this digit
             List<String> letters = DIGIT_LETTERS.get(Character.getNumericValue(digit));
+
             // Recursively try each letter
             for (String letter : letters) {
                 currentMnemonic.set(idx, letter);
@@ -60,6 +64,6 @@ class PhoneNumberMnemonic {
 
         // Display the possible combinations for the given phone number
         System.out.println("Possible combinations for phone number " + phoneNumber + " are:");
-        System.out.println(possibleCombinations); // This should print all possible mnemonics for the phone number
+        System.out.println(possibleCombinations);
     }
 }
