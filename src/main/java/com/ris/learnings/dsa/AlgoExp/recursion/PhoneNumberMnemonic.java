@@ -45,11 +45,12 @@ class PhoneNumberMnemonic {
                 currentMnemonic.set(idx, letter);
                 phoneNumberMnemonicHelper(idx + 1, phoneNumber, currentMnemonic, mnemonicFound);
             }
+            return;
         }
     }
 
     public static void main(String[] args) {
-        String phoneNumber = "1905"; // Example input phone number
+        String phoneNumber = "23"; // Example input phone number
         List<String> possibleCombinations = phoneNumberMnemonic(phoneNumber);
 
         // Display the possible combinations for the given phone number
