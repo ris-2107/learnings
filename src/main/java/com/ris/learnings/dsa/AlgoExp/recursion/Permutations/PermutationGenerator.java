@@ -22,7 +22,7 @@ public class PermutationGenerator {
         } else {
             // Generate permutations by iterating over elements and recursively processing
             // the rest
-            for (int i = 0; i < array.size(); i++) {
+            for (int i = 0; i < array.size(); i++) { 
                 List<Integer> newArray = new ArrayList<>(array); // Copy the array
                 Integer currentElement = newArray.remove(i); // Remove the current element
                 List<Integer> newPerm = new ArrayList<>(currentPerm); // Copy the current permutation
