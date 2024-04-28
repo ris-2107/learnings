@@ -1,7 +1,6 @@
 package com.ris.Rough;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class R1 {
     public static void main(String[] args) {

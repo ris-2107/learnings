@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 class PhoneNumberMnemonic {
-
-    // Mapping digits to corresponding letter sequences
     static final List<List<String>> DIGIT_LETTERS = Arrays.asList(List.of("0"), List.of("1"),
             Arrays.asList("a", "b", "c"), Arrays.asList("d", "e", "f"), Arrays.asList("g", "h", "i"),
             Arrays.asList("j", "k", "l"), Arrays.asList("m", "n", "o"), Arrays.asList("p", "q", "r", "s"),
@@ -23,7 +21,6 @@ class PhoneNumberMnemonic {
         return mnemonicFound;
     }
 
-    // Recursive helper function to build mnemonics
     static void phoneNumberMnemonicHelper(int idx, String phoneNumber, List<String> currentMnemonic,
             List<String> mnemonicFound) {
         if (idx == phoneNumber.length()) {
@@ -31,7 +28,6 @@ class PhoneNumberMnemonic {
             mnemonicFound.add(mnemonic);
 
         } else {
-
             char digit = phoneNumber.charAt(idx);
             List<String> letters = DIGIT_LETTERS.get(Character.getNumericValue(digit));
             for (String letter : letters) {
