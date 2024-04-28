@@ -53,8 +53,6 @@ public class AmbiguousMeasurement {
                 List.of(new int[] { 200, 210 }, new int[] { 450, 465 }, new int[] { 800, 850 }), 2100, 2300)); // Should
                                                                                                                // be
                                                                                                                // True
-        testCases.add(new TestCase(List.of(new int[] { 200, 210 }, new int[] { 250, 260 }, new int[] { 300, 310 }),
-                2100, 2300)); // Should be False
         testCases.add(new TestCase(
                 List.of(new int[] { 700, 800 }, new int[] { 900, 1000 }, new int[] { 400, 450 }), 2100, 2300)); // Should
                                                                                                                 // be
@@ -63,7 +61,7 @@ public class AmbiguousMeasurement {
         for (int i = 0; i < testCases.size(); i++) {
             TestCase test = testCases.get(i);
             boolean result = ambiguousMeasurement(test.measuringCups, test.low, test.high);
-            String expected = i == 0 || i == 2 ? "No" : "Yes";
+            String expected = i == 0 ? "No" : "Yes";
             System.out.printf(
                     "Test Case %d: Can we measure %d-%d? %s (Expected: %s)%n",
                     i + 1, test.low, test.high, result ? "Yes" : "No", expected);
