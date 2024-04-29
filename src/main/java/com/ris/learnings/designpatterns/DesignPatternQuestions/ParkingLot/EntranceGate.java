@@ -20,7 +20,8 @@ public class EntranceGate {
 
     public Ticket generateTicket(Vehicle vehicle, ParkingSpot parkingSpot) {
         // Implementation to generate ticket
-        return null;
+        Ticket tkt = new Ticket(System.currentTimeMillis(), parkingSpot, vehicle);
+        return tkt;
     }
 
 }

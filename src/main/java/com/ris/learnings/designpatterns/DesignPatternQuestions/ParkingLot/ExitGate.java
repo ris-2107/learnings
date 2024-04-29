@@ -13,6 +13,7 @@ public class ExitGate {
     }
 
     public void removeVehicle(Ticket ticket) {
+        // System.out.println(ticket.vehicle.);
         ParkingSpotManager manager = factory.getParkingSpotManager(ticket.vehicle.vehicleType, new ArrayList<>());
         manager.removeVehicle(ticket.vehicle);
     }
