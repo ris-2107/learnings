@@ -2,7 +2,7 @@ package com.ris.learnings.designpatterns.DesignPatternQuestions.ParkingLot;
 
 public class ParkingSpot {
     int id;
-    boolean isEmpty;
+    public boolean isEmpty;
     public Vehicle vehicle;
     int price;
 

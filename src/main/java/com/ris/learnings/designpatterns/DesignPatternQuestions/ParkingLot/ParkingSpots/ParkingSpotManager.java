@@ -16,7 +16,7 @@ public abstract class ParkingSpotManager {
 
     public void parkVehicle(Vehicle v) {
         ParkingSpot spot = findParkingSpace();
-        spot.removeVehicle();
+        spot.parkVehicle(v);
     }
 
     public void removeVehicle(Vehicle v) {
