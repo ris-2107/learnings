@@ -1,6 +1,6 @@
-package com.ris.learnings.java.multithreading;
+package com.ris.learnings.javaconcepts.multithreading.part2;
 
-public class MultithreadingLearning {
+public class Main {
 
     public static void main(String args[]){
 
