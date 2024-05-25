@@ -31,12 +31,12 @@ public class R2 {
                 board[row][col] = i;
 
                 // progresses further:
-                if (part(board, row, col, i + 1)) {
-                    return true;
-                } else {
-                    // Backtrack
-                    board[row][col] = 0;
-                }
+//                if ((board, row, col, i + 1)) {
+//                    return true;
+//                } else {
+//                    // Backtrack
+//                    board[row][col] = 0;
+//                }
             }
         }
         return false;
