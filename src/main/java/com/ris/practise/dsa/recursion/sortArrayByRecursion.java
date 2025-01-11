@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class sortArrayByRecursion {
   public static void main(String[] ar) {
-    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,13,12,45,78,39,6));
+    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 13, 12, 45, 78, 39, 6));
     list.add(1);
     list.add(40);
     sort(list);
