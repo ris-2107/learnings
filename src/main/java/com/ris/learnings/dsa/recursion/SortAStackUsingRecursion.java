@@ -31,14 +31,14 @@ public class SortAStackUsingRecursion {
     // <1> If the stack is empty
     // <2> If the ele is greater than the stack's last element,
     // then just add the element into the last of stack and return
-    if (stack.isEmpty() || stack.get(stack.size() - 1) <= ele) {
+    if (stack.isEmpty() || stack.peek() <= ele) {
       stack.push(ele);
       return;
     }
 
     // pick out the last element
     int poppedElement = stack.pop();
-    insertIntoStack(stack, ele); // now we are confirmed that the stack is sorted, we cam just add
+    insertIntoStack(stack, ele); // now we are confirmed that the stack is sorted, we can just add
     // the popped element at the last
     stack.push(poppedElement);
   }
