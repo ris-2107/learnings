@@ -4,19 +4,21 @@ import com.ris.learnings.designpatterns.StandardPatterns.ObserverPattern.Observa
 
 public class EmailAlertObserverImpl implements NotificationAlertObserver {
 
-    String emailId;
-    StocksObservable observable;
+    private final String emailId;
+    private final StocksObservable observable;
 
-    public EmailAlertObserverImpl(StocksObservable observable, String emailId ){
-        this.observable=observable;
-        this.emailId=emailId;
+    public EmailAlertObserverImpl(StocksObservable observable, String emailId) {
+        this.observable = observable;
+        this.emailId = emailId;
     }
+
     @Override
     public void update() {
-        sendMail(emailId, "Product back in Stock" );
+        sendMail(emailId, "Product back in Stock");
 
     }
-    public void sendMail(String emailId, String msg){
-        System.out.println("MAIL Sent to Email id :" +emailId + "'s User");
+
+    public void sendMail(String emailId, String msg) {
+        System.out.println("MAIL Sent to Email id :" + emailId + "'s User");
     }
 }
