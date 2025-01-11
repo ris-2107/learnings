@@ -1,15 +1,13 @@
 package com.ris.practise.dsa.recursion;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class sortArrayByRecursion {
   public static void main(String[] ar) {
-    ArrayList<Integer> list = new ArrayList<>();
+    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,13,12,45,78,39,6));
     list.add(1);
-    list.add(12);
-    list.add(3);
     list.add(40);
-    list.add(15);
     sort(list);
     list.forEach(System.out::println);
   }
