@@ -16,6 +16,7 @@ public class DeleteMiddleElementFromStack {
   }
 
   private static void deleteMiddleElementFromStack(final Stack<Integer> stack, int k) {
+
     // base condition:
     if (k == 1) {
       stack.pop();
