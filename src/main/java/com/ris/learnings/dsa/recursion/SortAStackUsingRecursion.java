@@ -27,8 +27,10 @@ public class SortAStackUsingRecursion {
   }
 
   private static void insertIntoStack(Stack<Integer> stack, int ele) {
-    // base case | <> If the stack is empty | <> If the ele is greater than the stack's
-    // last element, then just add the element into the last of stack and return
+    // BASE CASE
+    // <1> If the stack is empty
+    // <2> If the ele is greater than the stack's last element,
+    // then just add the element into the last of stack and return
     if (stack.isEmpty() || stack.get(stack.size() - 1) <= ele) {
       stack.push(ele);
       return;
@@ -36,7 +38,8 @@ public class SortAStackUsingRecursion {
 
     // pick out the last element
     int poppedElement = stack.pop();
-    insertIntoStack(stack, ele);
+    insertIntoStack(stack, ele); // now we are confirmed that the stack is sorted, we cam just add
+    // the popped element at the last
     stack.push(poppedElement);
   }
 }
