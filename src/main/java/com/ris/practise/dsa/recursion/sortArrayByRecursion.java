@@ -2,7 +2,7 @@ package com.ris.practise.dsa.recursion;
 
 import java.util.ArrayList;
 
-public class RC1 {
+public class sortArrayByRecursion {
   public static void main(String[] ar) {
     ArrayList<Integer> list = new ArrayList<>();
     list.add(1);
