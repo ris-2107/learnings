@@ -10,17 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Store {
     public static void main(String args[]) {
-        StocksObservable iphoneStoCkObservable = new IPhoneObservableImpl();
+        StocksObservable iphoneStockObservable = new IPhoneObservableImpl();
 
-        NotificationAlertObserver observer1 = new EmailAlertObserverImpl(iphoneStoCkObservable, "1@gmail.com");
-        NotificationAlertObserver observer2 = new EmailAlertObserverImpl(iphoneStoCkObservable, "2@gmail.com");
-        NotificationAlertObserver observer3 = new MobileAlertObserverImpl("3@gmail.com", iphoneStoCkObservable);
+        NotificationAlertObserver observer1 = new EmailAlertObserverImpl(iphoneStockObservable, "ob1@gmail.com");
+        NotificationAlertObserver observer2 = new EmailAlertObserverImpl(iphoneStockObservable, "ob2@gmail.com");
+        NotificationAlertObserver observer3 = new MobileAlertObserverImpl("ob3@gmail.com", iphoneStockObservable);
 
-        iphoneStoCkObservable.add(observer1);
-        iphoneStoCkObservable.add(observer2);
-        iphoneStoCkObservable.add(observer3);
+        iphoneStockObservable.add(observer1);
+        iphoneStockObservable.add(observer2);
+        iphoneStockObservable.add(observer3);
 
-        iphoneStoCkObservable.setStockCount(10);
+        iphoneStockObservable.setStockCount(10);
 
 
     }
