@@ -30,7 +30,7 @@ public class IPhoneObservableImpl implements StocksObservable {
     public void setStockCount(int newStockAdded) {
         // if stock is added, then notification goes.
         if(stockCount==0){
-            notifySubscribers();;
+            notifySubscribers();
         }
         stockCount=stockCount+newStockAdded;
     }
