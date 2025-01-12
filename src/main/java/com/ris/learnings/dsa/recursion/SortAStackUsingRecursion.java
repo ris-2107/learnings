@@ -24,6 +24,7 @@ public class SortAStackUsingRecursion {
     // pop and store the last element:
     int poppedElement = stack.pop();
     sortStack(stack); //  hoping this returns the sorted stack.
+
     // insert the poppedElement correctly:
     insertIntoStack(stack, poppedElement);
   }
