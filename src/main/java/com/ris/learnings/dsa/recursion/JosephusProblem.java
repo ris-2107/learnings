@@ -1,4 +1,5 @@
 package com.ris.learnings.dsa.recursion;
+
 import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 
@@ -14,12 +15,14 @@ public class JosephusProblem {
     log.info("Ans: {}", josephus);
   }
 
-  private static int josephus(ArrayList<Integer> n, int k, int idx) {
-    if (n.size() == 1) {
-      return n.get(0);
+  private static int josephus(ArrayList<Integer> personsList, int k, int swordPosition) {
+    // base case:
+    if (personsList.size() == 1) {
+      return personsList.get(0);
     }
-    idx = (idx + k) % (n.size());
-    n.remove(idx);
-    return josephus(n, k, idx);
+
+    swordPosition = (swordPosition + k) % (personsList.size());
+    personsList.remove(swordPosition);
+    return josephus(personsList, k, swordPosition);
   }
 }
