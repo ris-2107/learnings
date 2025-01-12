@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class NBitBinaryNumbersGreater1s {
 
   public static void main(String[] args) {
-    ArrayList<String> strings = generateNBitBinaryNumbers(5);
+    ArrayList<String> strings = generateNBitBinaryNumbers(3);
     strings.forEach(System.out::println);
   }
 
@@ -17,7 +17,7 @@ public class NBitBinaryNumbersGreater1s {
       ans.add(op);
       return;
     }
-    String op1 = op.app;
+    String op1 = op;
     op1 = op1 + "1";
     getNBitBinaryNumbers(onesCount + 1, zerosCount, n - 1, op1, ans);
 
