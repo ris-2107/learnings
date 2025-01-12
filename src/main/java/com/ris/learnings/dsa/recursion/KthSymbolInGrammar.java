@@ -1,6 +1,6 @@
 package com.ris.learnings.dsa.recursion;
 
-// leet code question
+// leetcode question
 public class KthSymbolInGrammar {
   public static void main(String[] args) {}
 
