@@ -38,7 +38,8 @@ public class SortAStackUsingRecursion {
 
     // pick out the last element
     int poppedElement = stack.pop();
-    insertIntoStack(stack, ele); // now we are confirmed that the stack is sorted, we can just add
+    insertIntoStack(stack, ele);
+    // now we are confirmed that the stack is sorted, we can just add
     // the popped element at the last
     stack.push(poppedElement);
   }
