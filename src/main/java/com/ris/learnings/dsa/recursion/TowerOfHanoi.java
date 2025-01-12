@@ -1,5 +1,4 @@
 package com.ris.learnings.dsa.recursion;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -18,6 +17,7 @@ public class TowerOfHanoi {
    * sorted now. But u still have to deal with the remaining 'n-1' discs. The n-1 discs will now
    * have to go through the process again in order to get placed.
    */
+
   private static void towerOfHanoi(int n, int source, int destination, int helper, int[] c) {
     // base case:
     if (n == 1) {
