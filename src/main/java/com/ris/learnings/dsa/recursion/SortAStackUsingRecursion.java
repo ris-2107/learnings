@@ -1,5 +1,7 @@
 package com.ris.learnings.dsa.recursion;
 
+import org.springframework.lang.NonNull;
+
 import java.util.Stack;
 
 public class SortAStackUsingRecursion {
@@ -14,7 +16,7 @@ public class SortAStackUsingRecursion {
     stack.forEach(System.out::println);
   }
 
-  private static void sortStack(Stack<Integer> stack) {
+  private static void sortStack(@NonNull Stack<Integer> stack) {
     // base condition:
     if (stack.size() == 1) {
       return;
