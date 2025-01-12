@@ -27,7 +27,7 @@ public class TowerOfHanoi {
     }
     towerOfHanoi(n - 1, source, helper, destination, c);
     // after the above step, the n-1 discs are sorted,
-    log.info("move disc : {}, from {} to {}", n, source, destination);
+    log.info("move disc : {}, from {} to {}", n, source, destination); // moving the 'n' th disc
     c[0]++;
     towerOfHanoi(n - 1, helper, destination, source, c);
   }
