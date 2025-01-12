@@ -10,22 +10,22 @@ public class NBitBinaryNumbersGreater1s {
   }
 
   private static void getNBitBinaryNumbers(
-      int ones, int zeros, int n, String op, ArrayList<String> ans) {
+      int onesCount, int zerosCount, int n, String op, ArrayList<String> ans) {
 
     // base condition:
     if (n == 0) {
       ans.add(op);
       return;
     }
-    String op1 = op;
+    String op1 = op.app;
     op1 = op1 + "1";
-    getNBitBinaryNumbers(ones + 1, zeros, n - 1, op1, ans);
+    getNBitBinaryNumbers(onesCount + 1, zerosCount, n - 1, op1, ans);
 
     // is it possible to add zeros ??
-    if (ones > zeros) {
+    if (onesCount > zerosCount) {
       String op2 = op;
       op2 = op2 + "0";
-      getNBitBinaryNumbers(ones, zeros + 1, n - 1, op2, ans);
+      getNBitBinaryNumbers(onesCount, zerosCount + 1, n - 1, op2, ans);
     }
   }
 
