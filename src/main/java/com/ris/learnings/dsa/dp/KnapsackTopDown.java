@@ -16,9 +16,17 @@ public class KnapsackTopDown {
     int[][] dp = new int[n + 1][capacity + 1];
     for (int i = 1; i <= n; i++) {
       for (int j = 1; j <= capacity; j++) {
-        int currWt=wts[0];
+        int currWt = wts[i - 1];
+        int currVal = vals[i - 1];
+        if (currWt <= j) {
+          int includeCase = currVal + dp[i - 1][j - currWt];
+          int excludeCase = dp[i - 1][j];
+          dp[i][j] = Math.max(includeCase, excludeCase);
+        } else {
+          dp[i][j] = dp[i - 1][j];
+        }
       }
     }
-    return 0;
+    return dp[n][capacity];
   }
 }
