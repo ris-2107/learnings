@@ -3,7 +3,7 @@ package com.ris.learnings.dsa.dp;
 public class PalindromePartitionBottomUpOptimised {
   public static void main(String[] args) {}
 
-  private static int pp(String s, int i, int j, int[][] DP) {
+  private static int palindromePartition(String s, int i, int j, int[][] DP) {
     if (i >= j) return 0;
     if (isPalindrome(s, i, j)) {
       return 0;
@@ -16,13 +16,13 @@ public class PalindromePartitionBottomUpOptimised {
       if (DP[i][k] != -1) {
         left = DP[i][k];
       } else {
-        left = pp(s, i, k, DP);
+        left = palindromePartition(s, i, k, DP);
         DP[i][k] = left;
       }
       if (DP[k + 1][j] != -1) {
         right = DP[k + 1][j];
       } else {
-        right = pp(s, k + 1, j, DP);
+        right = palindromePartition(s, k + 1, j, DP);
         DP[k + 1][j] = right;
       }
       int selfCost = 1;
