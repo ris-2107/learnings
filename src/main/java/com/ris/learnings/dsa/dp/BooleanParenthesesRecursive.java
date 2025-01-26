@@ -20,5 +20,6 @@ public class BooleanParenthesesRecursive {
       boolean rightTrue = booleanP(s, k + 1, j, true);
       boolean rightFalse = booleanP(s, k + 1, j, false);
     }
+    return false; // remove this later...
   }
 }
