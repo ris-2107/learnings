@@ -17,6 +17,7 @@ public class BFS {
   }
 
   private static void bfs(HashMap<Integer, ArrayList<Integer>> graph) {
+    if (graph.isEmpty()) System.err.println("Empty Graph");
     Queue<Integer> q = new LinkedList<>();
     HashSet<Integer> visited = new HashSet<>();
     final Integer firstEle = graph.keySet().iterator().next();
