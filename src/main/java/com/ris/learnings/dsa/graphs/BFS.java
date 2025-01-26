@@ -1,7 +1,9 @@
 package com.ris.learnings.dsa.graphs;
 
 import java.util.*;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class BFS {
   public static void main(String[] args) {
     HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>();
@@ -18,19 +20,19 @@ public class BFS {
 
   private static void bfs(HashMap<Integer, ArrayList<Integer>> graph) {
     if (graph.isEmpty()) System.err.println("Empty Graph");
+
     Queue<Integer> q = new LinkedList<>();
     HashSet<Integer> visited = new HashSet<>();
     final Integer firstEle = graph.keySet().iterator().next();
     q.add(firstEle);
     visited.add(firstEle);
-
     while (!q.isEmpty()) {
       final Integer polledEle = q.poll();
-      System.out.println(polledEle);
-      visited.add(polledEle);
+      System.out.print( polledEle + " -> " );
       for (Integer nbr : graph.get(polledEle)) {
         if (!visited.contains(nbr)) {
           q.add(nbr);
+          visited.add(nbr);
         }
       }
     }
