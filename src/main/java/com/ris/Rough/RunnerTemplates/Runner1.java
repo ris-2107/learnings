@@ -2,7 +2,7 @@ package com.ris.Rough.RunnerTemplates;
 
 public class Runner1 {
   public static void main(String[] args) {
-    solve(1);
+    System.out.println(solve(1));
   }
 
   private static int solve(int x) {
