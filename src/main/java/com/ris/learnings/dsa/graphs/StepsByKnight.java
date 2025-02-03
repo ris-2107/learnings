@@ -5,7 +5,7 @@ public class StepsByKnight {
 
       }
 
-      // minimum no of steps taken // this is the test comment
+      // minimum no of steps taken
       // by knight to reach from src to dest:
       private static int stepsByKnight(){
             return 0;
