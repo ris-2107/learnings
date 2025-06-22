@@ -9,11 +9,13 @@
 */
 package com.ris.Rough;
 
-public class PalindromePartitioning {
+public class PalindromePartitioning
+{
 
     static boolean[][] isPalin;
 
-    public static void isPalindrome(String str) {
+    public static void isPalindrome (String str)
+    {
         int n = str.length();
         isPalin = new boolean[n][n];
 
@@ -28,16 +30,20 @@ public class PalindromePartitioning {
         for (int len = 3; len <= n; len++) {
             for (int i = 0; i <= n - len; i++) {
                 int j = i + len - 1;
-                isPalin[i][j] = ((str.charAt(i) == str.charAt(j)) && (isPalin[i + 1][j - 1]));
+                isPalin[i][j] =
+                    ((str.charAt(i) == str.charAt(j)) && (isPalin[i + 1][j
+                        - 1]));
             }
         }
     }
 
-    public static boolean isPalindrome(String str, int i, int j) {
+    public static boolean isPalindrome (String str, int i, int j)
+    {
         return isPalin[i][j];
     }
 
-    public static int solve(String str, int i, int j, int[][] cache) {
+    public static int solve (String str, int i, int j, int[][] cache)
+    {
         if (i >= j)
             return 0;
         if (cache[i][j] != -1)
@@ -47,8 +53,11 @@ public class PalindromePartitioning {
 
         int min = Integer.MAX_VALUE;
         for (int k = i; k < j; k++) {
-            int leftPart = (cache[i][k] == -1) ? solve(str, i, k, cache) : cache[i][k];
-            int rightPart = (cache[k + 1][j] == -1) ? solve(str, k + 1, j, cache) : cache[k + 1][j];
+            int leftPart =
+                (cache[i][k] == -1) ? solve(str, i, k, cache) : cache[i][k];
+            int rightPart = (cache[k + 1][j] == -1) ?
+                solve(str, k + 1, j, cache) :
+                cache[k + 1][j];
             int temp = 1 + leftPart + rightPart;
             min = Math.min(min, temp);
         }
@@ -57,8 +66,10 @@ public class PalindromePartitioning {
         return cache[i][j];
     }
 
-    public static void main(String[] args) {
-        String str = "abcbm";
+    public static void main (String[] args)
+    {
+        String str = "nitin";
+        str = str.toLowerCase();
         int n = str.length();
 
         isPalindrome(str);
