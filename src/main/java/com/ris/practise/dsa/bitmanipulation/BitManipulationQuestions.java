@@ -19,9 +19,18 @@ public class BitManipulationQuestions {
         // ith bit from right to left:
         public static void main(String[] args) {
             int i = (int) (Math.random() * 10);
-            int n = (int) (Math.random() * 10) + (i * 2);
+            int n = (int) (Math.random() * 10) + (i * 15);
             System.out.println("ith bit checked: " + i + " for number n: " + n);
+
+            // using left shift operator
             if ((n & (1 << i)) != 0) {
+                System.out.println("It is set to true");
+            } else {
+                System.out.println("It is set to false");
+            }
+
+            // using right shift operator
+            if ((1 & (n >> i)) != 0) {
                 System.out.println("It is set to true");
             } else {
                 System.out.println("It is set to false");
