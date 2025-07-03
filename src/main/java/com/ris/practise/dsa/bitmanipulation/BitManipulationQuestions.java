@@ -18,7 +18,14 @@ public class BitManipulationQuestions {
     public static class CheckIfIthBitIsSet {
         // ith bit from right to left:
         public static void main(String[] args) {
-
+            int i = (int) (Math.random() * 10);
+            int n = (int) (Math.random() * 10) + (i * 2);
+            System.out.println("ith bit checked: " + i + " for number n: " + n);
+            if ((n & (1 << i)) != 0) {
+                System.out.println("It is set to true");
+            } else {
+                System.out.println("It is set to false");
+            }
         }
     }
 
