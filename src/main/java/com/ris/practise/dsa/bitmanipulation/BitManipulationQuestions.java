@@ -38,4 +38,43 @@ public class BitManipulationQuestions {
         }
     }
 
+    public static class setIthBit {
+        public static void main(String[] args) {
+            int n = Math.abs((int) (Math.random() * 100));
+            int i = Math.abs((int) (Math.random() * 10));
+            System.out.println(" 'I' is " + i);
+            int x = (1 << i);
+            System.out.println("Initial Number: " + Integer.toBinaryString(n));
+            System.out.println("After Setting ith bit: " + Integer.toBinaryString(n | x));
+        }
+
+    }
+
+    public static class clearIthBit {
+        public static void main(String[] args) {
+            int n = Math.abs((int) (Math.random() * 19840));
+            int i = Math.abs((int) (Math.random() * 10));
+            System.out.println(" 'I' is " + i);
+            int agent = ~(1 << i);
+            int ans = (agent & n);
+            System.out.println("Initial Number: " + Integer.toBinaryString(n));
+            System.out.println("After Clearing ith bit: " + Integer.toBinaryString(ans));
+        }
+    }
+
+    public static class toggleIthBit {
+        public static void main(String[] args) {
+            int n = Math.abs((int) (Math.random() * 1973));
+            int i = Math.abs((int) (Math.random() * 10));
+            int agent = (1 << i);
+            int ans = n ^ agent;
+            System.out.println("Operation completed at : " + System.currentTimeMillis());
+            System.out.println("'I' is " + i);
+            System.out.println("Initial Number: " + Integer.toBinaryString(n));
+            System.out.println("After Toggling ith bit: " + Integer.toBinaryString(ans));
+
+        }
+    }
+
+
 }
