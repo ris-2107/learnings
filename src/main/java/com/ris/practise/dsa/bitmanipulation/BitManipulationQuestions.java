@@ -2,7 +2,7 @@ package com.ris.practise.dsa.bitmanipulation;
 
 import java.util.ArrayList;
 
-public class BitManipulationQuestions {
+public abstract class BitManipulationQuestions {
 
     public static class Swap2Nos {
         public static void main(String[] args) {
@@ -79,7 +79,6 @@ public class BitManipulationQuestions {
     }
 
 
-
     // Application Questions
     public static class minFlipsRequiredToConvertANo {
         public static void main(String[] args) {
@@ -145,6 +144,16 @@ public class BitManipulationQuestions {
                     ans = ans | (1 << i);
                 }
             }
+            System.out.println("The single number is: " + ans);
+        }
+    }
+
+    public static class singleNumber3 {
+        private static final int[] nums = {1, 1, 2, 4, 5, 5, 2, 3};
+
+        public static void main(String[] args) {
+            int ans = 0;
+
             System.out.println("The single number is: " + ans);
         }
     }
