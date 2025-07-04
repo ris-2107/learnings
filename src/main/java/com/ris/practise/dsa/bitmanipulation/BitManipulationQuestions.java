@@ -128,14 +128,14 @@ public abstract class BitManipulationQuestions {
     }
 
     public static class singleNumber2 {
-        static int[] nums = {1, 1, 1, 2, 4, 5, 6, 4, 4, 5, 5, 6, 6};
+        private static final int[] nums = {1, 1, 1, 2, 4, 5, 6, 4, 4, 5, 5, 6, 6};
 
         public static void main(String[] args) {
             int ans = 0;
             for (int i = 0; i < 32; i++) {
                 int count = 0;
                 for (int num : nums) {
-                    if ((num & (1 << i)) != 0) {
+                    if ((num & (1 << i)) != 0) { // is the ith bit set ??
                         count++;
                     }
                 }
@@ -149,10 +149,11 @@ public abstract class BitManipulationQuestions {
     }
 
     public static class singleNumber3 {
+        // 2 nos appear once, rest all appear twice:
         private static final int[] nums = {1, 1, 2, 4, 5, 5, 2, 3};
 
         public static void main(String[] args) {
-            int ans = 0;
+            ArrayList<Integer> ans = new ArrayList<>();
 
             System.out.println("The single number is: " + ans);
         }
