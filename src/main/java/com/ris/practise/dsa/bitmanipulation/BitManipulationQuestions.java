@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public abstract class BitManipulationQuestions {
 
+//    private static final Object AND = &;
+
     public static class Swap2Nos {
         public static void main(String[] args) {
             int a = 6;
@@ -91,7 +93,7 @@ public abstract class BitManipulationQuestions {
                     c++;
                 }
             }
-            System.out.println("Min flips required from start " + start + " to goal " + goal + " is: " + c);
+            System.out.println("Min flips required from " + start + " to " + goal + " is: " + c);
         }
     }
 
@@ -111,7 +113,6 @@ public abstract class BitManipulationQuestions {
             }
             System.out.println(subsets);
         }
-
 
     }
 
@@ -158,6 +159,5 @@ public abstract class BitManipulationQuestions {
             System.out.println("The single number is: " + ans);
         }
     }
-
 
 }

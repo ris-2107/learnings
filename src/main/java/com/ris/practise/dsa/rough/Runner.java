@@ -1,5 +1,7 @@
 package com.ris.practise.dsa.rough;
 
+import java.util.Arrays;
+
 public class Runner {
 
     public static class yapper {
@@ -27,6 +29,10 @@ public class Runner {
     }
 
     public static class rizz {
-
+        public static void main(String[] args) {
+//            System.out.println(Arrays.toString(yapper.nums));
+            // print java version:
+            System.out.println(System.getProperty("java.version"));
+        }
     }
 }
